@@ -1,13 +1,33 @@
-# AGSD-make-synthetic-dataset-for-Sen-SSum
-# The Sen-SSum models were established by ESPnet and LLAMA-FACTORY (We trained LALM by LLAMA-FACTORY) .
+This repository contains tools and configurations for generating synthetic datasets used to train the Sen-SSum (Speech-to-Summary) models. The Sen-SSum pipeline integrates ESPnet for automatic speech recognition (ASR) and LLaMA-Factory for training large language models (LALMs).
 
-# 1.ESPnet
-# we give the code, the train Configuration, the data.
-ESPnet: https://github.com/espnet/espnet.git
-Pre-trained ASR Model: https://huggingface.co/espnet/kamo-naoyuki_librispeech_asr_train_asr_conformer5_raw_bpe5000_frontend-truncated-b76af5
-Train Configuration: conf/train.yaml
-Train Data: data
+🗂️ Project Structure
+text
+.
+├── conf/                 # Configuration files
+│   ├── train.yaml               # ESPnet training configuration
+│   └── train_full_sft.yaml      # LLaMA-Factory training configuration
+├── data/                 # Training datasets and processed data
+└── README.md
+⚙️ Components
+1. ESPnet (ASR Module)
+We use ESPnet for speech recognition preprocessing.
 
-# 2. LLAMA-FACTORY (LALM)
-LALM: https://github.com/hiyouga/LLaMA-Factory.git
-Pre-trained LALM Model:
+Repository: espnet/espnet
+
+Pre-trained ASR Model: kamo-naoyuki/librispeech_asr
+
+Training Configuration: conf/train.yaml
+
+Data Directory: data/
+
+2. LLaMA-Factory (LALM Training)
+We use LLaMA-Factory for fine-tuning the large language model for summarization.
+
+Repository: hiyouga/LLaMA-Factory
+
+Pre-trained Model: Qwen/Qwen2-Audio-7B
+
+Training Configuration: conf/train_full_sft.yaml
+
+Data Directory: data/
+
