@@ -22,3 +22,4 @@ Training Configuration: conf/train_full_sft.yaml
 
 Data Directory: data/
 
+Note: The remaining data and code will be made public along with the paper submitted to ICASSP2026.
