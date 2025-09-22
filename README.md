@@ -3,9 +3,11 @@
 
 # 1.ESPnet
 # we give the code, the train Configuration, the data.
-ESPnet: git clone https://github.com/espnet/espnet.git
-Pre-trained Model: https://huggingface.co/espnet/kamo-naoyuki_librispeech_asr_train_asr_conformer5_raw_bpe5000_frontend-truncated-b76af5
+ESPnet: https://github.com/espnet/espnet.git
+Pre-trained ASR Model: https://huggingface.co/espnet/kamo-naoyuki_librispeech_asr_train_asr_conformer5_raw_bpe5000_frontend-truncated-b76af5
 Train Configuration: conf/train.yaml
 Train Data: data
 
 # 2. LLAMA-FACTORY (LALM)
+LALM: https://github.com/hiyouga/LLaMA-Factory.git
+Pre-trained LALM Model:
